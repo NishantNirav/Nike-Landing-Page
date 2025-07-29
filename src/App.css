@@ -1,0 +1,223 @@
+/* Importing the Popins font from the google fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --red: #d01c28;
+  --gray: #2e2e2e;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  overflow: hidden;
+  /*Using the popins as default all over the body / pages*/
+
+}
+
+button {
+  all: unset;
+  padding: 6px 16px;
+  background-color: var(--red);
+  height: 32px;
+  color: white;
+  font-weight: 500;
+  font-size: 24px;
+  border: 1px solid transparent;
+
+}
+
+button:hover {
+  background-color: transparent;
+  color: #2e2e2e;
+  border: 1px solid var(--gray);
+  cursor: pointer;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1280px;
+  overflow: hidden;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  height: 72px;
+  padding: 1rem;
+
+  /* background-color: orange; */
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aquamarine; */
+    width: max-content;
+    
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 24px;
+    color: var(--gray);
+    border: 1px solid transparent;
+    /* background-color: aqua; */
+
+    :hover {
+      cursor: pointer;
+      color: white;
+      /* border: 1px solid var(--gray); */
+      background-color: var(--red);
+      padding: 5px 5px;
+      transition: ease-in-out;
+      
+
+    }
+  }
+
+}
+
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 72px);
+  padding: 1rem;
+  /* background:blue; */
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+  }
+
+  h1 {
+    font-family: 800;
+    font-size: 108px;
+    line-height: 102px;
+
+  }
+
+  p {
+    font-weight: 600;
+    color: var(--gray);
+    max-width: 400px;
+  }
+
+  .hero-btn {
+    display: flex;
+    gap: 40px;
+
+    .secondary-btn {
+      background: transparent;
+      color: var(--gray);
+      border: 1px solid var(--gray);
+
+    }
+
+  }
+
+
+
+
+}
+
+.shopping p {
+  display: flex;
+  margin-bottom: 8px;
+
+}
+
+.brand-icons {
+  display: flex;
+  gap: 16px;
+}
+
+/* Responsiveness for screens 600px and below (phones) */
+@media only screen and (max-width: 600px) {
+
+  * {
+    max-width: 100vw;
+    overflow: hidden;
+
+  }
+
+  button {
+    font-size: 12px;
+    height: 16px;
+  }
+
+  nav {
+    /* background-color: orange; */
+    justify-content: space-between;
+    align-items: center;
+    justify-content: space-between;
+
+    ul {
+      font-size: 12px;
+      gap: 10px;
+    }
+
+
+  }
+
+  .hero {
+    flex-direction: column-reverse;
+    gap: 10px;
+    justify-content: start;
+    padding: 1rem;
+
+    /* background-color: blue; */
+
+    h1 {
+      font-size: 18px;
+      line-height: 1rem;
+      /* background-color: orange; */
+      font-weight: 8000;
+
+    }
+
+    p {
+      font-size: 10px;
+      font-weight: 500;
+      /* background-color: orange; */
+    }
+
+    .hero-content {
+      gap: 10px;
+      /* background-color: #2e2e2e; */
+    }
+
+    .hero-btn {
+      /* justify-content: center; */
+      gap: 10px;
+    }
+
+    .hero-image {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      /* align-items: center; */
+      /* background-color: aqua; */
+
+    }
+
+  }
+
+}
